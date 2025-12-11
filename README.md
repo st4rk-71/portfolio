@@ -1,53 +1,65 @@
-# Personal Portfolio 
+# Personal Portfolio – Assignment 4
 
-This project is part of **Assignment 3** for the SWE course.  
-It builds on **Assignment 1 + Assignment 2**, adding advanced features such as API integration, sorting, improved state handling, and better interaction.
-
----
-
-## 🚀 Features
-
-### ✅ From Assignment 1
-- Responsive layout (mobile, tablet, desktop)
-- About Me section with image and intro
-- Projects section with sample projects
-- Contact form (no backend needed)
-- Greeting message based on time of day
-- Dark/Light theme toggle saved in localStorage
+This is the **final, fully polished version** of my personal portfolio web application for **SWE363 – Web Engineering**.  
+It combines all features from Assignments 1, 2, and 3, and adds final improvements, documentation, deployment, and presentation elements.
 
 ---
 
-### ✅ From Assignment 2
+## 🚀 Final Features (A1 → A4)
+
+### ✅ Assignment 1 – Core Website
+- Responsive layout (mobile/tablet/desktop)
+- About Me section
+- Projects section with visuals
+- Contact form (no backend)
+- Greeting based on time of day
+- Dark/Light theme toggle saved in `localStorage`
+
+---
+
+### ✅ Assignment 2 – UX Improvements
 - Project filtering (All / Web / C++)
-- LocalStorage for filter persistence
+- Persistent filter (saved in `localStorage`)
 - Smooth fade-in animations
-- Improved UX and interactivity
+- Cleaner UI and better interactivity
 
 ---
 
-### 🆕 Assignment 3 Enhancements
-- **GitHub API Integration** – displays latest public repositories
-- **Sorting System** – sort projects by title or category
-- **Improved Error Handling**
-  - Loading state
-  - API unavailable message
-  - Retry button
-- **Better State Management**
-  - Saves sort option
-  - Saves GitHub username
-- **Performance Optimization**
-  - Reduced image sizes
-  - Removed unused code
-- **More Dynamic Behavior**
-  - Show/hide UI sections
-  - Updated DOM handling
+### ✅ Assignment 3 – Advanced Functionality
+- **GitHub API Integration**  
+  Shows latest public repositories
+- **Sorting system**  
+  Sort projects A→Z or Z→A
+- **Improved error handling**  
+  Loading states, retry button, friendly messages
+- **State management**  
+  Saves sorting choice, theme, GitHub username
+- **Performance optimization**  
+  Smaller images, reduced unused code
+
+---
+
+### 🆕 Assignment 4 – Final Enhancements
+- Cleaned and polished UI
+- Improved responsiveness across all devices
+- Deployment through **GitHub Pages**
+- Final documentation added:
+  - `README.md` (this file)
+  - `docs/technical-documentation.md`
+  - `docs/ai-usage-report.md`
+- Added presentation folder:
+  - `presentation/slides.pdf`
+  - `presentation/demo-video.mp4` (optional)
+- Code fully reviewed for professional quality
 
 ---
 
 ## 📁 Project Structure
 
 
-assignment-3/
+
+
+assignment-4/
 ├── index.html
 ├── css/
 │ └── styles.css
@@ -58,10 +70,18 @@ assignment-3/
 ├── docs/
 │ ├── ai-usage-report.md
 │ └── technical-documentation.md
+├── presentation/
+│ ├── slides.pdf
+│ └── demo-video.mp4
 └── README.md
 
 
 ---
+
+## 🌐 Live Deployment
+ visit my site 
+
+ https://st4rk-71.github.io/assignment-4/
 
 ## 🛠️ How to Run
 1. Clone the repository
@@ -83,6 +103,6 @@ The project can be hosted using GitHub Pages, Netlify, or Vercel if desired.
 ---
 
 ## 👤 Author
-**Rayyan**
+**Rayan**
 
 
