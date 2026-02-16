@@ -85,56 +85,6 @@ function applySort(mode) {
   cards.forEach((card) => projectsGrid.appendChild(card));
 }
 
-// ==========================
-// GitHub API – Auto Fetch
-// ==========================
-const GITHUB_USERNAME = "st4rk-71";
-const ghStatus = document.getElementById("github-status");
-const ghList = document.getElementById("repo-list");
-const ghRetry = document.getElementById("retry-fetch");
-
-async function loadRepos() {
-  if (!ghStatus || !ghList || !ghRetry) return;
-
-  ghStatus.textContent = "Loading repositories...";
-  ghRetry.hidden = true;
-  ghList.innerHTML = "";
-
-  try {
-    const response = await fetch(
-      `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`
-    );
-
-    if (!response.ok) throw new Error("GitHub API error");
-
-    const repos = await response.json();
-
-    if (!repos || repos.length === 0) {
-      ghStatus.textContent = "No public repositories found.";
-      return;
-    }
-
-    repos.forEach((repo) => {
-      const li = document.createElement("li");
-      li.className = "repo-item fade";
-      li.innerHTML = `
-        <a href="${repo.html_url}" target="_blank" rel="noopener">${repo.name}</a>
-        <div class="repo-meta">⭐ ${repo.stargazers_count}</div>
-        <div class="repo-meta">Updated: ${new Date(repo.updated_at).toLocaleDateString()}</div>
-        <p>${repo.description || "No description"}</p>
-      `;
-      ghList.appendChild(li);
-    });
-
-    ghStatus.textContent = "";
-  } catch (err) {
-    ghStatus.textContent = "Failed to load repositories.";
-    ghRetry.hidden = false;
-  }
-}
-
-if (ghRetry) ghRetry.addEventListener("click", loadRepos);
-loadRepos();
 
 
 const contactForm = document.getElementById("contact-form");
