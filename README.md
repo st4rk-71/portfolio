@@ -81,7 +81,8 @@ assignment-4/
 ## 🌐 Live Deployment
  visit my site 
 
- https://st4rk-71.github.io/assignment-4/
+ https://st4rk-71.github.io/portfolio/
+ 
 
 ## 🛠️ How to Run
 1. Clone the repository
