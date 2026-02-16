@@ -1,7 +1,7 @@
 # Personal Portfolio – Assignment 4
 
-This is the **final, fully polished version** of my personal portfolio web application for **SWE363 – Web Engineering**.  
-It combines all features from Assignments 1, 2, and 3, and adds final improvements, documentation, deployment, and presentation elements.
+This project is part of **Assignment 3** for the SWE course.  
+It builds on **Assignment 1 + Assignment 2**, adding advanced features such as API integration, sorting, improved state handling, and more better interaction.
 
 ---
 

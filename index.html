@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>My Portfolio</title>
+    <title>Rayan Faisal Alsaedi | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
@@ -24,7 +24,7 @@
     </header>
 
     <main>
-      <!-- About Section -->
+  
       <section id="about" class="container-about-section">
         <div class="about-left">
           <img
@@ -34,115 +34,210 @@
             loading="lazy"
           />
         </div>
+
         <div class="about-right">
           <h1 id="greeting">Hello!</h1>
-          <p class="tagline">Student • Learner • Aspiring Software Engineer</p>
-          <p>
-            Hi, I’m Rayan a junior SWE student in KFUPM. I enjoy solving
-            problems with code and building useful tools. I’m currently learning
-            AI and web development, and I will keep growing day after day.
+
+          <p class="tagline">
+            Senior Software Engineering Student • KFUPM • Web Developer
           </p>
+
+          <p>
+            Hi, I’m Rayan — a senior Software Engineering student at KFUPM
+            (Expected Graduation: Dec 2026). I build web applications and enjoy
+            turning requirements into clean, working products. I’m currently
+            looking for a summer training opportunity.
+          </p>
+
+          <div class="cta">
+          <a 
+            class="btn"
+            href="assets/MyCv%20(3).pdf"
+            target="_blank"
+            rel="noopener"
+          >
+             CV
+          </a>
+
+            <a class="btn btn-outline" href="#projects">View Projects</a>
+          </div>
         </div>
       </section>
 
-      <!-- Projects Section -->
-      <section id="projects" class="projects-Container">
-        <h2>Projects</h2>
+    
+     <section id="projects" class="projects-Container">
+  <h2>Projects</h2>
 
-       
-        <div class="sort-controls">
-          <label for="sort-projects">Sort by:</label>
-          <select id="sort-projects">
-            <option value="az">Title (A → Z)</option>
-            <option value="za">Title (Z → A)</option>
-          </select>
-        </div>
+  <div class="sort-controls">
+    <label for="sort-projects">Sort by:</label>
+    <select id="sort-projects">
+      <option value="az">Title (A → Z)</option>
+      <option value="za">Title (Z → A)</option>
+    </select>
+  </div>
 
-        <!-- Filter Buttons -->
-        <div class="filter-buttons">
-          <button class="filter-btn" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="cpp">C++</button>
-        </div>
+  <div class="filter-buttons">
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="cpp">C++</button>
+  </div>
 
-        <div class="projects-grid">
-          <article class="project-card fade" data-category="web">
-            <img
-              src="assets/images/pro1.png"
-              alt="Project 1"
-              loading="lazy"
-            />
-            <h3>Score Tournament Application for KFUPM Students</h3>
-            <p>
-              I built a web application to organize tournaments for KFUPM
-              students. Players can join teams and receive notifications, while
-              admins can manage tournaments, teams, approve players, and assign
-              captains.
-            </p>
-          </article>
+  <div class="projects-grid">
 
-          <article class="project-card fade" data-category="cpp">
-            <img
-              src="assets/images/pro2.png"
-              alt="Project 2"
-              loading="lazy"
-            />
-            <h3>Bank Management System (C++ Application)</h3>
-            <p>
-              Developed a console-based banking system in C++ that allows users
-              to add/delete accounts, deposit/withdraw funds, and view the
-              client list.
-            </p>
-          </article>
-        </div>
-      </section>
+    <!-- Featured Project -->
+    <article class="project-card fade featured" data-category="web">
+      <span class="featured-badge">Featured</span>
 
-      <!-- Contact Section -->
-      <section id="contact" class="container section contact">
-        <h2>Contact</h2>
-        <form
-          id="contact-form"
-          action="mailto:Stark20xoogmail.com"
-          method="POST"
-          enctype="text/plain"
+      <img
+        src="assets/images/qudrat.png"
+        alt="Qudrat Test Preparation Platform"
+        loading="lazy"
+      />
+
+      <h3>Qudrat Test Preparation Platform</h3>
+
+      <div class="chips">
+        <span class="chip">React</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">MongoDB</span>
+        <span class="chip">REST API</span>
+      </div>
+
+      <p>
+        Full-stack platform for Qudrat exam preparation featuring daily exams,
+        custom exams, and a performance dashboard. Deployed as a live demo.
+      </p>
+
+      <div class="card-actions">
+        <a
+          class="link-btn"
+          href="https://swe363-project-4mmv.onrender.com"
+          target="_blank"
+          rel="noopener"
         >
-          <label>
-            Name
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
+          Live Demo
+        </a>
+      </div>
+    </article>
 
-      <!-- GitHub API Section -->
-      <section id="github" class="github-section container">
-        <h2>Latest GitHub Repos</h2>
+    <!-- Score Tournament -->
+    <article class="project-card fade" data-category="web">
+      <img
+        src="assets/images/pro1.png"
+        alt="Score Tournament Application"
+        loading="lazy"
+      />
 
-        <div id="github-status" class="github-status" aria-live="polite">
-            Loading repositories...
-        </div>
+      <h3>Score Tournament Application for KFUPM Students</h3>
 
-        <ul id="repo-list" class="repo-list"></ul>
+      <div class="chips">
+        <span class="chip">Node.js</span>
+        <span class="chip">MongoDB</span>
+        <span class="chip">Web App</span>
+      </div>
 
-        <div class="github-actions">
-          <button id="retry-fetch" class="retry-btn" hidden>Retry</button>
-        </div>
-      </section>
+      <p>
+        Web application for managing university tournaments with player/admin
+        roles, team applications, tournament management, and player statistics.
+      </p>
+    </article>
+
+    <!-- Bank Management -->
+    <article class="project-card fade" data-category="cpp">
+      <img
+        src="assets/images/pro2.png"
+        alt="Bank Management System"
+        loading="lazy"
+      />
+
+      <h3>Bank Management System (C++ Application)</h3>
+
+      <div class="chips">
+        <span class="chip">C++</span>
+        <span class="chip">OOP</span>
+        <span class="chip">Console App</span>
+      </div>
+
+      <p>
+        Console-based banking system supporting account management,
+        deposits/withdrawals, and client record handling.
+      </p>
+    </article>
+
+  </div>
+</section>
 
 
-    </main>
+
+ 
+    
+
+      
+    <section id="github" class="github-section container">
+  <div class="github-wrapper">
+    
+    <img 
+      src="assets/images/github-logo.png" 
+      alt="GitHub Logo"
+      class="github-logo"
+    />
+
+    <h2>GitHub</h2>
+
+    <p class="github-sub">
+      Explore more of my projects and source code on GitHub.
+    </p>
+
+    <p class="github-username">@st4rk-71</p>
+
+    <a
+      class="btn"
+      href="https://github.com/st4rk-71"
+      target="_blank"
+      rel="noopener"
+    >
+      Visit My GitHub
+    </a>
+
+  </div>
+</section>
+
+
+       <section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p class="contact-sub">Feel free to reach out — I usually respond as soon as I see the message.
+</p>
+
+
+  <form
+    id="contact-form"
+    action="https://formspree.io/f/xjgerogd"
+    method="POST"
+  >
+    <label>
+      Name
+      <input type="text" name="name" required />
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" required />
+    </label>
+
+    <label>
+      Message
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+
+    <button type="submit">Send Message</button>
+    <p id="form-status"></p>
+  </form>
+</section>
+
 
     <footer class="site-footer">
       <div class="container">
-        <p>© Rayyan — Assignments 1, 2 & 3</p>
+        <p>© Rayan Faisal Alsaedi</p>
       </div>
     </footer>
 

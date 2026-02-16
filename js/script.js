@@ -1,44 +1,38 @@
-// ==========================
-// Greeting by Time of Day
-// ==========================
+
 const greeting = document.getElementById("greeting");
 const now = new Date();
 const hour = now.getHours();
 
-if (hour < 12) {
-  greeting.textContent = "Good Morning!";
-} else if (hour < 18) {
-  greeting.textContent = "Good Afternoon!";
-} else {
-  greeting.textContent = "Good Evening!";
+if (greeting) {
+  if (hour < 12) greeting.textContent = "Good Morning!";
+  else if (hour < 18) greeting.textContent = "Good Afternoon!";
+  else greeting.textContent = "Good Evening!";
 }
 
-// ==========================
-// Dark/Light Theme Toggle
-// ==========================
+
 const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
 
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-theme");
-  themeToggle.textContent = "☀️";
+  if (themeToggle) themeToggle.textContent = "☀️";
 }
 
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("dark-theme");
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
 
-  if (body.classList.contains("dark-theme")) {
-    themeToggle.textContent = "☀️";
-    localStorage.setItem("theme", "dark");
-  } else {
-    themeToggle.textContent = "🌙";
-    localStorage.setItem("theme", "light");
-  }
-});
+    if (body.classList.contains("dark-theme")) {
+      themeToggle.textContent = "☀️";
+      localStorage.setItem("theme", "dark");
+    } else {
+      themeToggle.textContent = "🌙";
+      localStorage.setItem("theme", "light");
+    }
+  });
+}
 
-// ==========================
-// Project Filter Feature
-// ==========================
+
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
@@ -62,9 +56,7 @@ function applyFilter(category) {
   });
 }
 
-// ==========================
-// Project Sort (A–Z / Z–A)
-// ==========================
+
 const sortSelect = document.getElementById("sort-projects");
 const projectsGrid = document.querySelector(".projects-grid");
 
@@ -81,6 +73,7 @@ if (sortSelect && projectsGrid) {
 }
 
 function applySort(mode) {
+  if (!projectsGrid) return;
   const cards = Array.from(projectsGrid.querySelectorAll(".project-card"));
 
   cards.sort((a, b) => {
@@ -95,12 +88,14 @@ function applySort(mode) {
 // ==========================
 // GitHub API – Auto Fetch
 // ==========================
-const GITHUB_USERNAME = "st4rk-71"; // ← YOUR username
+const GITHUB_USERNAME = "st4rk-71";
 const ghStatus = document.getElementById("github-status");
 const ghList = document.getElementById("repo-list");
 const ghRetry = document.getElementById("retry-fetch");
 
 async function loadRepos() {
+  if (!ghStatus || !ghList || !ghRetry) return;
+
   ghStatus.textContent = "Loading repositories...";
   ghRetry.hidden = true;
   ghList.innerHTML = "";
@@ -110,13 +105,11 @@ async function loadRepos() {
       `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`
     );
 
-    if (!response.ok) {
-      throw new Error("GitHub API error");
-    }
+    if (!response.ok) throw new Error("GitHub API error");
 
     const repos = await response.json();
 
-    if (repos.length === 0) {
+    if (!repos || repos.length === 0) {
       ghStatus.textContent = "No public repositories found.";
       return;
     }
@@ -125,11 +118,9 @@ async function loadRepos() {
       const li = document.createElement("li");
       li.className = "repo-item fade";
       li.innerHTML = `
-        <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+        <a href="${repo.html_url}" target="_blank" rel="noopener">${repo.name}</a>
         <div class="repo-meta">⭐ ${repo.stargazers_count}</div>
-        <div class="repo-meta">Updated: ${new Date(
-          repo.updated_at
-        ).toLocaleDateString()}</div>
+        <div class="repo-meta">Updated: ${new Date(repo.updated_at).toLocaleDateString()}</div>
         <p>${repo.description || "No description"}</p>
       `;
       ghList.appendChild(li);
@@ -142,8 +133,34 @@ async function loadRepos() {
   }
 }
 
-// Retry
-ghRetry.addEventListener("click", loadRepos);
-
-// Auto load on page open
+if (ghRetry) ghRetry.addEventListener("click", loadRepos);
 loadRepos();
+
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm && formStatus) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    formStatus.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        formStatus.textContent = "✅ Message sent! I’ll reply soon.";
+        contactForm.reset();
+      } else {
+        formStatus.textContent = "❌ Something went wrong. Please try again.";
+      }
+    } catch {
+      formStatus.textContent = "❌ Network error. Please try again.";
+    }
+  });
+}
