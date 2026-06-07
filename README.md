@@ -2,26 +2,25 @@
 
 A personal portfolio website built to showcase my projects, skills, and experience as a Software Engineering student at KFUPM. Designed with co-op and internship applications in mind
 
-## 🔗 Live Site: st4rk-71.github.io/portfolio
+🔗 **Live Site:** [st4rk-71.github.io/portfolio](https://st4rk-71.github.io/portfolio/)
 
 ---
 
 ## 📖 About
 This portfolio presents my work as a full-stack web developer. It includes a projects showcase, a skills overview, a contact form, and links to my GitHub and CV.
 
-### ✅ Features
+### ## ✅ Features
 
-📱 Responsive layout — works on mobile, tablet, and desktop
-🌙 Dark / Light theme toggle — OS preference detection + localStorage persistence
-👋 Time-based greeting — Good morning / afternoon / evening
-🔍 Project filtering — Filter by All / Web / C++
-🔤 Project sorting — Sort A→Z or Z→A
-✨ Scroll animations — Fade-in via IntersectionObserver
-🔵 Active nav highlighting — Highlights current section while scrolling
-📬 Contact form — Powered by Formspree with async submission
-☰ Mobile hamburger menu
-🛠️ Skills & Technologies section
-
+- 📱 **Responsive layout** — works on mobile, tablet, and desktop
+- 🌙 **Dark / Light theme toggle** — OS preference detection + `localStorage` persistence
+- 👋 **Time-based greeting** — Good morning / afternoon / evening
+- 🔍 **Project filtering** — Filter by All / Web / C++
+- 🔤 **Project sorting** — Sort A→Z or Z→A
+- ✨ **Scroll animations** — Fade-in via IntersectionObserver
+- 🔵 **Active nav highlighting** — Highlights current section while scrolling
+- 📬 **Contact form** — Powered by Formspree with async submission
+- ☰ **Mobile hamburger menu**
+- 🛠️ **Skills & Technologies section**
 ---
 
 ## 🛠️ Tech Stack
