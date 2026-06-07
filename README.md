@@ -1,105 +1,103 @@
-# Personal Portfolio – Assignment 4
+# 🌐 Rayan Alsaedi — Personal Portfolio
 
-This project is part of **Assignment 3** for the SWE course.  
-It builds on **Assignment 1 + Assignment 2**, adding advanced features such as API integration, sorting, improved state handling, and more better interaction.
+A personal portfolio website built to showcase my projects, skills, and experience as a Software Engineering student at KFUPM. Designed with co-op and internship applications in mind
 
----
-
-## 🚀 Final Features (A1 → A4)
-
-### ✅ Assignment 1 – Core Website
-- Responsive layout (mobile/tablet/desktop)
-- About Me section
-- Projects section with visuals
-- Contact form (no backend)
-- Greeting based on time of day
-- Dark/Light theme toggle saved in `localStorage`
+## 🔗 Live Site: st4rk-71.github.io/portfolio
 
 ---
 
-### ✅ Assignment 2 – UX Improvements
-- Project filtering (All / Web / C++)
-- Persistent filter (saved in `localStorage`)
-- Smooth fade-in animations
-- Cleaner UI and better interactivity
+## 📖 About
+This portfolio presents my work as a full-stack web developer. It includes a projects showcase, a skills overview, a contact form, and links to my GitHub and CV.
+
+### ✅ Features
+
+📱 Responsive layout — works on mobile, tablet, and desktop
+🌙 Dark / Light theme toggle — OS preference detection + localStorage persistence
+👋 Time-based greeting — Good morning / afternoon / evening
+🔍 Project filtering — Filter by All / Web / C++
+🔤 Project sorting — Sort A→Z or Z→A
+✨ Scroll animations — Fade-in via IntersectionObserver
+🔵 Active nav highlighting — Highlights current section while scrolling
+📬 Contact form — Powered by Formspree with async submission
+☰ Mobile hamburger menu
+🛠️ Skills & Technologies section
 
 ---
 
-### ✅ Assignment 3 – Advanced Functionality
-- **GitHub API Integration**  
-  Shows latest public repositories
-- **Sorting system**  
-  Sort projects A→Z or Z→A
-- **Improved error handling**  
-  Loading states, retry button, friendly messages
-- **State management**  
-  Saves sorting choice, theme, GitHub username
-- **Performance optimization**  
-  Smaller images, reduced unused code
-
----
-
-### 🆕 Assignment 4 – Final Enhancements
-- Cleaned and polished UI
-- Improved responsiveness across all devices
-- Deployment through **GitHub Pages**
-- Final documentation added:
-  - `README.md` (this file)
-  - `docs/technical-documentation.md`
-  - `docs/ai-usage-report.md`
-- Added presentation folder:
-  - `presentation/slides.pdf`
-  - `presentation/demo-video.mp4` (optional)
-- Code fully reviewed for professional quality
-
----
-
-## 📁 Project Structure
+## 🛠️ Tech Stack
+| Layer | Technology |
+|---|---|
+| **Markup** | HTML5 (semantic) |
+| **Styling** | CSS3 — Grid, Flexbox, custom properties, animations |
+| **Logic** | Vanilla JavaScript — no frameworks |
+| **Form Backend** | Formspree |
+| **Fonts** | Google Fonts — DM Serif Display + DM Sans |
 
 
-
-
-assignment-4/
+## 🗂️ Project Structure
+portfolio/
 ├── index.html
 ├── css/
-│ └── styles.css
+│   └── styles.css
 ├── js/
-│ └── script.js
-├── assets/
-│ └── images/
-├── docs/
-│ ├── ai-usage-report.md
-│ └── technical-documentation.md
-├── presentation/
-│ ├── slides.pdf
-│ └── demo-video.mp4
-└── README.md
+│   └── script.js
+└── assets/
+    ├── images/
+    │   ├── profile.png
+    │   ├── qudrat.png
+    │   ├── pro1.png
+    │   └── pro2.png
+    └── Rayan_Faisal_Alsaedi_SWE CV.pdf
 
 
 ---
 
-## 🌐 Live Deployment
- visit my site 
+## 💼 Projects
+# ⭐ Qudrat Test Preparation Platform (Featured)
+React · Node.js · MongoDB · REST API
 
- https://st4rk-71.github.io/portfolio/
+Full-stack platform for Qudrat exam preparation featuring daily exams, custom exams, and a performance dashboard.
+
+#  Score Tournament App — KFUPM
+Node.js · MongoDB · Web App
+
+Web application for managing university tournaments with player/admin roles, team management, and statistics.
+
+## 🎓 Education
+King Fahd University of Petroleum and Minerals (KFUPM)
+
+📚 B.S. in Software Engineering
+🗓️ Expected Graduation: December 2026
+📍 Dhahran, Saudi Arabia
  
+## 🚀 How to Run
 
-## 🛠️ How to Run
-1. Clone the repository
-2. Open the `index.html` file in any browser
-3. Explore the portfolio
+1. Clone the repository:
 
-No dependencies, no backend — this project runs on plain HTML, CSS, and JavaScript.
+bash   git clone https://github.com/st4rk-71/portfolio.git
+
+2. Open index.html in any browser
+
+
+No build tools, no dependencies, no backend — runs entirely on plain HTML, CSS, and JavaScript.
+
+
 
 ---
 
-## 🧠 AI Summary
-AI tools were used to assist in improving the structure, interactivity, and documentation of this assignment. More details can be found in `docs/ai-usage-report.md`.
-
+## 📬 Contact
+| Method | Details |
+|---|---|
+| **Email** | s202169810@kfupm.edu.sa |
+| **Phone** | +966 599 175 002 |
+| **GitHub** | [@st4rk-71](https://github.com/st4rk-71) |
+| **Live Portfolio** | [st4rk-71.github.io/portfolio](https://st4rk-71.github.io/portfolio/) |
 ---
 
 
 ## 👤 Author
-**Rayan**
+**Rayan Faisal Alsaedi
+Senior Software Engineering Student — KFUPM
+Currently seeking a Summer Co-op opportunity**
 
 

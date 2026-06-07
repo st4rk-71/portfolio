@@ -1,246 +1,294 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Rayan Faisal Alsaedi | Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-
-  <body>
-    <header class="header">
-      <nav class="nav-continer">
-        <a class="logo" href="#about">Rayan</a>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#github">GitHub</a></li>
-        </ul>
-        <div class="Contols">
-          <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-  
-      <section id="about" class="container-about-section">
-        <div class="about-left">
-          <img
-            src="assets/images/profile.png"
-            alt="Profile"
-            class="profile-img"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="about-right">
-          <h1 id="greeting">Hello!</h1>
-
-          <p class="tagline">
-            Senior Software Engineering Student • KFUPM • Web Developer
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rayan Alsaedi — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+ 
+  <!-- NAV -->
+  <header class="header" id="top">
+    <nav class="nav-inner">
+      <a class="logo" href="#about">R.</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a class="btn-nav-cv" href="assets/Rayan_Faisal_Alsaedi_SWE CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        <button id="theme-toggle" aria-label="Toggle theme" class="theme-btn">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+ 
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+      <li><a href="assets/Rayan_Faisal_Alsaedi_SWE CV.pdf" target="_blank" class="mob-link">Download CV</a></li>
+    </ul>
+  </div>
+ 
+  <main>
+ 
+    <!-- HERO / ABOUT -->
+    <section id="about" class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <span class="hero-eyebrow" id="greeting">Hello!</span>
+          <h1 class="hero-title">I'm <em>Rayan Alsaedi</em> — <br>Software Engineer</h1>
+          <p class="hero-desc">
+            Senior Software Engineering student at KFUPM (Expected Dec 2026). I build full-stack web applications — from clean REST APIs to polished, responsive frontends. Currently seeking a <strong>Summer 2025 Co-op</strong>.
           </p>
-
-          <p>
-            Hi, I’m Rayan — a senior Software Engineering student at KFUPM
-            (Expected Graduation: Dec 2026). I build web applications and enjoy
-            turning requirements into clean, working products. I’m currently
-            looking for a summer training opportunity.
-          </p>
-
-          <div class="cta">
-          <a 
-            class="btn"
-            href="assets/MyCv%20(3).pdf"
-            target="_blank"
-            rel="noopener"
-          >
-             CV
-          </a>
-
-            <a class="btn btn-outline" href="#projects">View Projects</a>
+          <div class="hero-badges">
+            <span class="badge">📍 Dhahran, Saudi Arabia</span>
+            <span class="badge">🎓 KFUPM — SWE</span>
+            <span class="badge badge-available">✦ Open to Co-op</span>
+          </div>
+          <div class="hero-cta">
+            <a class="btn-primary" href="assets/Rayan_Faisal_Alsaedi_SWE CV.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn-secondary" href="#projects">See My Work</a>
+            <a class="btn-ghost" href="https://github.com/st4rk-71" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
           </div>
         </div>
-      </section>
-
-    
-     <section id="projects" class="projects-Container">
-  <h2>Projects</h2>
-
-  <div class="sort-controls">
-    <label for="sort-projects">Sort by:</label>
-    <select id="sort-projects">
-      <option value="az">Title (A → Z)</option>
-      <option value="za">Title (Z → A)</option>
-    </select>
-  </div>
-
-  <div class="filter-buttons">
-    <button class="filter-btn" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="web">Web</button>
-    <button class="filter-btn" data-filter="cpp">C++</button>
-  </div>
-
-  <div class="projects-grid">
-
-    <!-- Featured Project -->
-    <article class="project-card fade featured" data-category="web">
-      <span class="featured-badge">Featured</span>
-
-      <img
-        src="assets/images/qudrat.png"
-        alt="Qudrat Test Preparation Platform"
-        loading="lazy"
-      />
-
-      <h3>Qudrat Test Preparation Platform</h3>
-
-      <div class="chips">
-        <span class="chip">React</span>
-        <span class="chip">Node.js</span>
-        <span class="chip">MongoDB</span>
-        <span class="chip">REST API</span>
+        <div class="hero-img-wrap">
+          <div class="hero-img-ring">
+            <img src="assets/images/profile.png" alt="Rayan Alsaedi" class="hero-img" loading="eager" />
+          </div>
+          <div class="hero-decoration"></div>
+        </div>
       </div>
-
-      <p>
-        Full-stack platform for Qudrat exam preparation featuring daily exams,
-        custom exams, and a performance dashboard. Deployed as a live demo.
-      </p>
-
-      <div class="card-actions">
-        <a
-          class="link-btn"
-          href="https://swe363-project-4mmv.onrender.com"
-          target="_blank"
-          rel="noopener"
-        >
-          Live Demo
-        </a>
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
       </div>
-    </article>
-
-    <!-- Score Tournament -->
-    <article class="project-card fade" data-category="web">
-      <img
-        src="assets/images/pro1.png"
-        alt="Score Tournament Application"
-        loading="lazy"
-      />
-
-      <h3>Score Tournament Application for KFUPM Students</h3>
-
-      <div class="chips">
-        <span class="chip">Node.js</span>
-        <span class="chip">MongoDB</span>
-        <span class="chip">Web App</span>
-      </div>
-
-      <p>
-        Web application for managing university tournaments with player/admin
-        roles, team applications, tournament management, and player statistics.
-      </p>
-    </article>
-
-    <!-- Bank Management -->
-    <article class="project-card fade" data-category="cpp">
-      <img
-        src="assets/images/pro2.png"
-        alt="Bank Management System"
-        loading="lazy"
-      />
-
-      <h3>Bank Management System (C++ Application)</h3>
-
-      <div class="chips">
-        <span class="chip">C++</span>
-        <span class="chip">OOP</span>
-        <span class="chip">Console App</span>
-      </div>
-
-      <p>
-        Console-based banking system supporting account management,
-        deposits/withdrawals, and client record handling.
-      </p>
-    </article>
-
-  </div>
-</section>
-
-
-
+    </section>
  
-    
-
-      
-    <section id="github" class="github-section container">
-  <div class="github-wrapper">
-    
-    <img 
-      src="assets/images/github-logo.png" 
-      alt="GitHub Logo"
-      class="github-logo"
-    />
-
-    <h2>GitHub</h2>
-
-    <p class="github-sub">
-      Explore more of my projects and source code on GitHub.
-    </p>
-
-    <p class="github-username">@st4rk-71</p>
-
-    <a
-      class="btn"
-      href="https://github.com/st4rk-71"
-      target="_blank"
-      rel="noopener"
-    >
-      Visit My GitHub
-    </a>
-
-  </div>
-</section>
-
-
-       <section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p class="contact-sub">Feel free to reach out — I usually respond as soon as I see the message.
-</p>
-
-
-  <form
-    id="contact-form"
-    action="https://formspree.io/f/xjgerogd"
-    method="POST"
-  >
-    <label>
-      Name
-      <input type="text" name="name" required />
-    </label>
-
-    <label>
-      Email
-      <input type="email" name="email" required />
-    </label>
-
-    <label>
-      Message
-      <textarea name="message" rows="5" required></textarea>
-    </label>
-
-    <button type="submit">Send Message</button>
-    <p id="form-status"></p>
-  </form>
-</section>
-
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© Rayan Faisal Alsaedi</p>
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">Capabilities</span>
+          <h2>Skills & Technologies</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 class="skill-group-title">Frontend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">Backend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">MongoDB</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">Tools</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">MongoDB Atlas</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-
-    <script src="js/script.js" defer></script>
-  </body>
+    </section>
+ 
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">Work</span>
+          <h2>Projects</h2>
+        </div>
+ 
+        <div class="project-controls">
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="cpp">C++</button>
+          </div>
+          <div class="sort-group">
+            <label for="sort-projects">Sort:</label>
+            <select id="sort-projects">
+              <option value="az">A → Z</option>
+              <option value="za">Z → A</option>
+            </select>
+          </div>
+        </div>
+ 
+        <div class="projects-grid" id="projects-grid">
+ 
+          <!-- Featured -->
+          <article class="project-card featured" data-category="web">
+            <div class="card-image-wrap">
+              <img src="assets/images/qudrat.png" alt="Qudrat Test Preparation Platform" loading="lazy" />
+              <span class="featured-badge">Featured</span>
+            </div>
+            <div class="card-body">
+              <h3>Qudrat Test Preparation Platform</h3>
+              <p>Full-stack platform for Qudrat exam preparation featuring daily exams, custom exams, and a performance dashboard. Deployed as a live demo.</p>
+              <div class="chips">
+                <span class="chip">React</span>
+                <span class="chip">Node.js</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">REST API</span>
+              </div>
+              <div class="card-footer">
+                <a class="link-btn" href="https://swe363-project-4mmv.onrender.com" target="_blank" rel="noopener">
+                  Live Demo
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+ 
+          <!-- Score Tournament -->
+          <article class="project-card" data-category="web">
+            <div class="card-image-wrap">
+              <img src="assets/images/pro1.png" alt="Score Tournament Application" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <h3>Score Tournament App — KFUPM</h3>
+              <p>Web application for managing university tournaments with player/admin roles, team applications, and player statistics.</p>
+              <div class="chips">
+                <span class="chip">Node.js</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">Web App</span>
+              </div>
+              <div class="card-footer"></div>
+            </div>
+          </article>
+ 
+          <!-- Bank Management -->
+          <article class="project-card" data-category="cpp">
+            <div class="card-image-wrap">
+              <img src="assets/images/pro2.png" alt="Bank Management System" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <h3>Bank Management System</h3>
+              <p>Console-based banking system in C++ supporting account management, deposits/withdrawals, and client record handling with OOP principles.</p>
+              <div class="chips">
+                <span class="chip">C++</span>
+                <span class="chip">OOP</span>
+                <span class="chip">Console App</span>
+              </div>
+              <div class="card-footer"></div>
+            </div>
+          </article>
+ 
+        </div>
+      </div>
+    </section>
+ 
+    <!-- GITHUB -->
+    <section id="github" class="github-section">
+      <div class="section-inner">
+        <div class="github-card">
+          <div class="github-left">
+            <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            <div>
+              <h2>Explore My Code</h2>
+              <p>More projects, source code, and experiments on GitHub.</p>
+              <code class="username">@st4rk-71</code>
+            </div>
+          </div>
+          <a class="btn-primary" href="https://github.com/st4rk-71" target="_blank" rel="noopener">Visit GitHub →</a>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="section-inner contact-inner">
+        <div class="contact-left">
+          <span class="section-label">Get in Touch</span>
+          <h2>Let's Talk</h2>
+          <p>I'm actively looking for summer co-op opportunities. Whether you have a position, a project, or just want to say hi — my inbox is open.</p>
+          <div class="contact-links">
+             <a href="https://mail.google.com/mail/?view=cm&to=s202169810@kfupm.edu.sa" target="_blank" rel="noopener" class="contact-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Email Me
+    </a>
+    <a href="https://github.com/st4rk-71" target="_blank" rel="noopener" class="contact-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      GitHub
+    </a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form id="contact-form" action="https://formspree.io/f/xjgerogd" method="POST" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">Send Message</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">R.</span>
+      <p>© 2025 Rayan Faisal Alsaedi. Built with care.</p>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+ 
+  <script src="js/script.js" defer></script>
+</body>
 </html>
