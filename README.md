@@ -2,7 +2,7 @@
 
 A personal portfolio website built to showcase my projects, skills, and experience as a Software Engineering student at KFUPM. Designed with co-op and internship applications in mind
 
-🔗 **Live Site: [st4rk-71.github.io/portfolio]**(https://st4rk-71.github.io/portfolio/)
+🔗 **Live Site:** [st4rk-71.github.io/portfolio](https://st4rk-71.github.io/portfolio/)
 
 ---
 
