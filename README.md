@@ -51,13 +51,13 @@ portfolio/
 
 ---
 
-## 💼 Projects
-# ⭐ Qudrat Test Preparation Platform (Featured)
+# 💼 Projects
+## ⭐ Qudrat Test Preparation Platform (Featured)
 React · Node.js · MongoDB · REST API
 
 Full-stack platform for Qudrat exam preparation featuring daily exams, custom exams, and a performance dashboard.
 
-#  Score Tournament App — KFUPM
+##  Score Tournament App — KFUPM
 Node.js · MongoDB · Web App
 
 Web application for managing university tournaments with player/admin roles, team management, and statistics.
