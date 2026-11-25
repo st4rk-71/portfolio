@@ -199,6 +199,10 @@ html.light .i-moon { display: block; }
 .link { margin-top: auto; padding-top: 10px; color: var(--accent); font-weight: 600; text-decoration: none; }
 .link:hover { text-decoration: underline; }
 
+.award-photo { position: relative; }
+.project .award-photo img { object-position: center 40%; }
+.award-badge { position: absolute; left: 16px; bottom: 16px; background: rgba(11,15,23,.82); color: #fff; font-size: 13px; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.15); backdrop-filter: blur(6px); }
+
 /* ============ Skills ============ */
 .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .skill { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
