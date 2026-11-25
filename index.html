@@ -1,294 +1,312 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Rayan Alsaedi — Software Engineer</title>
+  <meta name="description" content="Rayan Alsaedi — Software Engineering graduate from KFUPM. Data engineering at Huawei, full-stack web development, UAV ground control software." />
+  <meta property="og:title" content="Rayan Alsaedi — Software Engineer" />
+  <meta property="og:description" content="Software Engineering graduate (KFUPM, Dec 2026). Huawei intern. Full-stack and data engineering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    try { if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light'); } catch (e) {}
+  </script>
 </head>
 <body>
- 
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
   <!-- NAV -->
-  <header class="header" id="top">
-    <nav class="nav-inner">
-      <a class="logo" href="#about">R.</a>
-      <ul class="nav-links">
+  <header class="header" id="header">
+    <nav class="nav">
+      <a class="logo" href="#top" aria-label="Back to top">RA<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#senior-project">Senior Project</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <a class="btn-nav-cv" href="assets/Rayan_Faisal_Alsaedi_SWE CV.pdf" target="_blank" rel="noopener">Download CV</a>
-        <button id="theme-toggle" aria-label="Toggle theme" class="theme-btn">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle light and dark theme">
+          <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
+        <a class="btn btn-small" href="assets/Rayan_Alsaedi_CV.pdf" target="_blank" rel="noopener">Résumé</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
       </div>
     </nav>
   </header>
- 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobile-menu">
-    <ul>
-      <li><a href="#about" class="mob-link">About</a></li>
-      <li><a href="#skills" class="mob-link">Skills</a></li>
-      <li><a href="#projects" class="mob-link">Projects</a></li>
-      <li><a href="#contact" class="mob-link">Contact</a></li>
-      <li><a href="assets/Rayan_Faisal_Alsaedi_SWE CV.pdf" target="_blank" class="mob-link">Download CV</a></li>
-    </ul>
-  </div>
- 
-  <main>
- 
-    <!-- HERO / ABOUT -->
-    <section id="about" class="hero">
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
       <div class="hero-inner">
-        <div class="hero-text">
-          <span class="hero-eyebrow" id="greeting">Hello!</span>
-          <h1 class="hero-title">I'm <em>Rayan Alsaedi</em> — <br>Software Engineer</h1>
-          <p class="hero-desc">
-            Senior Software Engineering student at KFUPM (Expected Dec 2026). I build full-stack web applications — from clean REST APIs to polished, responsive frontends. Currently seeking a <strong>Summer 2026 Co-op</strong>.
+        <p class="eyebrow mono"><span class="dot"></span> Open to full-time roles · Graduating Dec 2026</p>
+        <h1 class="hero-title">
+          <span class="line"><span>Rayan Alsaedi</span></span>
+          <span class="line muted"><span>Software Engineer.</span></span>
+        </h1>
+        <p class="hero-sub">
+          I build data pipelines and full-stack web applications. Most recently at
+          <span class="inline-brand"><img src="assets/images/huawei.svg" alt="" width="18" height="18" />Huawei</span>,
+          where I matched telecom customer data to the fiber network.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#experience">View my work</a>
+          <a class="btn btn-ghost" href="assets/Rayan_Alsaedi_CV.pdf" target="_blank" rel="noopener">Download résumé</a>
+          <a class="btn btn-ghost" href="https://github.com/st4rk-71" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="section-head reveal">
+          <span class="label mono">01 — About</span>
+          <h2>Engineer who likes real data and working software.</h2>
+        </div>
+        <div class="about-body">
+          <p class="reveal">
+            I'm a Software Engineering student at <strong>King Fahd University of Petroleum and Minerals (KFUPM)</strong>,
+            graduating in December 2026. My experience spans data engineering in industry and full-stack development at university.
           </p>
-          <div class="hero-badges">
-            <span class="badge">📍 Dhahran, Saudi Arabia</span>
-            <span class="badge">🎓 KFUPM — SWE</span>
-            <span class="badge badge-available">✦ Open to Co-op</span>
-          </div>
-          <div class="hero-cta">
-            <a class="btn-primary" href="assets/Rayan_Faisal_Alsaedi_SWE CV.pdf" target="_blank" rel="noopener">Download CV</a>
-            <a class="btn-secondary" href="#projects">See My Work</a>
-            <a class="btn-ghost" href="https://github.com/st4rk-71" target="_blank" rel="noopener">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-              GitHub
-            </a>
-          </div>
-        </div>
-        <div class="hero-img-wrap">
-          <div class="hero-img-ring">
-            <img src="assets/images/profile.png" alt="Rayan Alsaedi" class="hero-img" loading="eager" />
-          </div>
-          <div class="hero-decoration"></div>
-        </div>
-      </div>
-      <div class="scroll-hint">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
- 
-    <!-- SKILLS -->
-    <section id="skills" class="skills-section">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-label">Capabilities</span>
-          <h2>Skills & Technologies</h2>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3 class="skill-group-title">Frontend</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">HTML5</span>
-              <span class="skill-tag">CSS3</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">Responsive Design</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3 class="skill-group-title">Backend</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">REST APIs</span>
-              <span class="skill-tag">Express.js</span>
-              <span class="skill-tag">MongoDB</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3 class="skill-group-title">Languages</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">C++</span>
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">SQL</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3 class="skill-group-title">Tools</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Git & GitHub</span>
-              <span class="skill-tag">VS Code</span>
-              <span class="skill-tag">Postman</span>
-              <span class="skill-tag">MongoDB Atlas</span>
-            </div>
+          <p class="reveal">
+            At Huawei I cleaned and matched large telecom datasets for a major operator. In my senior design project I own the ground control
+            software for a UAV system. In my course projects I built REST APIs, admin dashboards and databases end to end.
+          </p>
+          <div class="stats">
+            <div class="stat reveal"><span class="num" data-count="8">0</span><span class="cap">weeks at Huawei CEM</span></div>
+            <div class="stat reveal"><span class="num" data-count="22">0</span><span class="cap">REST endpoints shipped</span></div>
+            <div class="stat reveal"><span class="num" data-count="150" data-suffix="+">0</span><span class="cap">students graded</span></div>
+            <div class="stat reveal"><span class="num">3.1</span><span class="cap">GPA · B.S. SWE</span></div>
           </div>
         </div>
       </div>
     </section>
- 
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label mono">02 — Experience</span>
+          <h2>Where I've worked</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="job reveal">
+            <div class="job-side">
+              <div class="company-logo huawei"><img src="assets/images/huawei.svg" alt="Huawei logo" width="40" height="40" /></div>
+              <span class="job-date mono">Jun – Aug 2026</span>
+            </div>
+            <div class="job-main">
+              <h3>Platform Engineering Intern</h3>
+              <p class="job-org">Huawei Tech. Investment Saudi Arabia · Customer Experience Management (CEM) · Riyadh</p>
+              <ul>
+                <li>Built a geospatial data pipeline in <strong>Python (pandas, scikit-learn)</strong> to find a telecom operator's Fixed Wireless Access customers who can move to fiber (FTTH), by matching each customer to the nearest fiber site.</li>
+                <li>Cleaned and standardized large raw customer and network datasets: missing headers, inconsistent delimiters, mixed types and invalid coordinates.</li>
+                <li>Replaced brute-force comparison with a <strong>BallTree spatial index</strong> and haversine distance for fast, accurate nearest-neighbor search.</li>
+                <li>Added distance and business-unit classification and delivered an analysis-ready dataset to the client's marketing team.</li>
+                <li>Supported identity and access management testing, including cross-organization authentication on <strong>Linux over SSH</strong>, for the client's cybersecurity team.</li>
+              </ul>
+              <div class="chips"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>Geospatial</span><span>Linux</span><span>SSH</span></div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-side">
+              <div class="company-logo kfupm mono">KFUPM</div>
+              <span class="job-date mono">Jan 2026 – Now</span>
+            </div>
+            <div class="job-main">
+              <h3>Course Grader (Part-Time)</h3>
+              <p class="job-org">KFUPM · SWE 363 Web Applications Development</p>
+              <ul>
+                <li>Graded assignments and projects for 150+ students per term in a team of 8 graders, now in my second consecutive term (252 &amp; 261).</li>
+                <li>Wrote feedback on submissions and reviewed regrade requests to keep evaluation fair.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SENIOR PROJECT -->
+    <section id="senior-project" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label mono">03 — Senior Design Project</span>
+          <h2>Integrated UAV-Based Data Acquisition &amp; Performance Evaluation System</h2>
+          <p class="lead">A four-person multidisciplinary team (Aerospace, Computer Engineering and Software). I own the software on the ground.</p>
+        </div>
+
+        <div class="sp-grid">
+          <figure class="sp-diagram reveal" aria-label="System diagram: the UAV sends encrypted telemetry and a video link to the ground control station">
+            <svg viewBox="0 0 520 300" role="img">
+              <title>UAV to Ground Control Station data flow</title>
+              <g class="d-node">
+                <rect x="20" y="40" width="150" height="76" rx="12"/>
+                <text x="95" y="72" text-anchor="middle" class="d-t">UAV</text>
+                <text x="95" y="94" text-anchor="middle" class="d-s">sensors · camera</text>
+              </g>
+              <g class="d-node accent">
+                <rect x="330" y="110" width="170" height="150" rx="12"/>
+                <text x="415" y="140" text-anchor="middle" class="d-t">Ground Control</text>
+                <text x="415" y="160" text-anchor="middle" class="d-t">Station</text>
+                <text x="415" y="188" text-anchor="middle" class="d-s">dashboard · logs</text>
+                <text x="415" y="208" text-anchor="middle" class="d-s">object detection</text>
+                <text x="415" y="228" text-anchor="middle" class="d-s">performance metrics</text>
+              </g>
+              <path class="d-link" d="M170 64 C 260 64, 260 140, 330 140"/>
+              <path class="d-link d-link2" d="M170 96 C 240 96, 240 200, 330 200"/>
+              <text x="236" y="58" class="d-l">telemetry · AES-256-GCM</text>
+              <text x="196" y="178" class="d-l">video link</text>
+              <text x="30" y="250" class="d-s">My part: everything on the right.</text>
+            </svg>
+          </figure>
+          <div class="sp-cards">
+            <div class="sp-card reveal">
+              <h3>Live dashboard</h3>
+              <p>Live video, telemetry (altitude, speed, battery, signal), map position and link-health status in one screen.</p>
+            </div>
+            <div class="sp-card reveal">
+              <h3>Secure telemetry</h3>
+              <p>AES-256-GCM with nonce and tag checks. Failed packets are rejected and logged, and all logs are timestamped and synchronized.</p>
+            </div>
+            <div class="sp-card reveal">
+              <h3>Detection &amp; evaluation</h3>
+              <p>Ground-side detection of people and vehicles, tested on real drone footage, with a timing benchmark and a simulation that validates the scoring method.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECTS -->
-    <section id="projects" class="projects-section">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-label">Work</span>
-          <h2>Projects</h2>
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label mono">04 — Projects</span>
+          <h2>Things I've built</h2>
         </div>
- 
-        <div class="project-controls">
-          <div class="filter-group">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="cpp">C++</button>
-          </div>
-          <div class="sort-group">
-            <label for="sort-projects">Sort:</label>
-            <select id="sort-projects">
-              <option value="az">A → Z</option>
-              <option value="za">Z → A</option>
-            </select>
-          </div>
-        </div>
- 
-        <div class="projects-grid" id="projects-grid">
- 
-          <!-- Featured -->
-          <article class="project-card featured" data-category="web">
-            <div class="card-image-wrap">
-              <img src="assets/images/qudrat.png" alt="Qudrat Test Preparation Platform" loading="lazy" />
-              <span class="featured-badge">Featured</span>
+
+        <div class="projects">
+          <article class="project featured reveal">
+            <div class="project-img img-placeholder mono" aria-hidden="true"><span>🏆 2nd Place · Beyond Horizons</span></div>
+            <div class="project-body">
+              <span class="tag mono">2nd Place · Beyond Horizons 30-Hour Challenge · 2026</span>
+              <h3>WadiWatch: Flash-Flood Risk Mapping for Jeddah</h3>
+              <p>A Random Forest model trained on free satellite data (Google Earth Engine: elevation, hydrology, land cover, rainfall) and historical flood records maps flood risk across Jeddah's neighborhoods. A web app flags new construction inside high-risk flood paths so it can be caught at the permit stage. Built in 30 hours at the Beyond Horizons Challenge, organized by the Aerospace Engineering Club.</p>
+              <div class="chips"><span>Machine Learning</span><span>Random Forest</span><span>Earth Engine</span><span>Web App</span></div>
             </div>
-            <div class="card-body">
+          </article>
+
+          <article class="project featured reveal">
+            <div class="project-img"><img src="assets/images/qudrat.png" alt="Qudrat Test Preparation Platform screenshot" loading="lazy" /></div>
+            <div class="project-body">
+              <span class="tag mono">Full-stack · Team of 4</span>
               <h3>Qudrat Test Preparation Platform</h3>
-              <p>Full-stack platform for Qudrat exam preparation featuring daily exams, custom exams, and a performance dashboard. Deployed as a live demo.</p>
-              <div class="chips">
-                <span class="chip">React</span>
-                <span class="chip">Node.js</span>
-                <span class="chip">MongoDB</span>
-                <span class="chip">REST API</span>
-              </div>
-              <div class="card-footer">
-                <a class="link-btn" href="https://swe363-project-4mmv.onrender.com" target="_blank" rel="noopener">
-                  Live Demo
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-              </div>
+              <p>Exam preparation platform with 3 user roles, a responsive React front end and 22 REST endpoints over 6 MongoDB models. I built the admin dashboard on my own and reached 100% API test coverage in Postman.</p>
+              <div class="chips"><span>React</span><span>Node.js</span><span>MongoDB</span><span>REST</span></div>
+              <a class="link" href="https://swe363-project-4mmv.onrender.com" target="_blank" rel="noopener">Live demo →</a>
             </div>
           </article>
- 
-          <!-- Score Tournament -->
-          <article class="project-card" data-category="web">
-            <div class="card-image-wrap">
-              <img src="assets/images/pro1.png" alt="Score Tournament Application" loading="lazy" />
-            </div>
-            <div class="card-body">
-              <h3>Score Tournament App — KFUPM</h3>
-              <p>Web application for managing university tournaments with player/admin roles, team applications, and player statistics.</p>
-              <div class="chips">
-                <span class="chip">Node.js</span>
-                <span class="chip">MongoDB</span>
-                <span class="chip">Web App</span>
-              </div>
-              <div class="card-footer"></div>
+
+          <article class="project reveal">
+            <div class="project-img"><img src="assets/images/pro1.png" alt="Tournament management app screenshot" loading="lazy" /></div>
+            <div class="project-body">
+              <span class="tag mono">Database Systems</span>
+              <h3>KFUPM Tournament Management App</h3>
+              <p>Designed the full database and built a 9-page app for teams, players, matches and statistics. I built the 7-page admin panel on my own.</p>
+              <div class="chips"><span>React</span><span>TypeScript</span><span>Supabase</span></div>
             </div>
           </article>
- 
-          <!-- Bank Management -->
-          <article class="project-card" data-category="cpp">
-            <div class="card-image-wrap">
-              <img src="assets/images/pro2.png" alt="Bank Management System" loading="lazy" />
+
+          <article class="project reveal">
+            <div class="project-img img-placeholder mono" aria-hidden="true">
+              <span>delayed · cancelled · on-time</span>
             </div>
-            <div class="card-body">
+            <div class="project-body">
+              <span class="tag mono">Data Science</span>
+              <h3>Flight Status Prediction</h3>
+              <p>Classification models on a real flight dataset to predict delays and cancellations, with data cleaning and exploratory analysis.</p>
+              <div class="chips"><span>Python</span><span>Jupyter</span><span>ML</span></div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-img"><img src="assets/images/pro2.png" alt="Bank management system screenshot" loading="lazy" /></div>
+            <div class="project-body">
+              <span class="tag mono">C++ · OOP</span>
               <h3>Bank Management System</h3>
-              <p>Console-based banking system in C++ supporting account management, deposits/withdrawals, and client record handling with OOP principles.</p>
-              <div class="chips">
-                <span class="chip">C++</span>
-                <span class="chip">OOP</span>
-                <span class="chip">Console App</span>
-              </div>
-              <div class="card-footer"></div>
+              <p>Console banking system with account management, deposits, withdrawals and client records, built with object-oriented design.</p>
+              <div class="chips"><span>C++</span><span>OOP</span></div>
             </div>
           </article>
- 
         </div>
       </div>
     </section>
- 
-    <!-- GITHUB -->
-    <section id="github" class="github-section">
-      <div class="section-inner">
-        <div class="github-card">
-          <div class="github-left">
-            <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-            <div>
-              <h2>Explore My Code</h2>
-              <p>More projects, source code, and experiments on GitHub.</p>
-              <code class="username">@st4rk-71</code>
-            </div>
-          </div>
-          <a class="btn-primary" href="https://github.com/st4rk-71" target="_blank" rel="noopener">Visit GitHub →</a>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label mono">05 — Skills</span>
+          <h2>Tools I work with</h2>
+        </div>
+        <div class="skills">
+          <div class="skill reveal"><h3>Languages</h3><p>JavaScript · TypeScript · Python · Java · C++ · SQL</p></div>
+          <div class="skill reveal"><h3>Web</h3><p>React · Node.js · Express · REST APIs · MongoDB · Supabase</p></div>
+          <div class="skill reveal"><h3>Data &amp; ML</h3><p>pandas · scikit-learn · Jupyter · geospatial analysis</p></div>
+          <div class="skill reveal"><h3>Tools</h3><p>Git &amp; GitHub · Postman · Linux · SSH · VS Code</p></div>
+          <div class="skill reveal"><h3>Cloud</h3><p>AWS · GCP (in training)</p></div>
+          <div class="skill reveal"><h3>Education</h3><p>B.S. Software Engineering, KFUPM · Dec 2026</p></div>
         </div>
       </div>
     </section>
- 
+
     <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-      <div class="section-inner contact-inner">
-        <div class="contact-left">
-          <span class="section-label">Get in Touch</span>
-          <h2>Let's Talk</h2>
-          <p>I'm actively looking for summer co-op opportunities. Whether you have a position, a project, or just want to say hi — my inbox is open.</p>
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div class="contact-left reveal">
+          <span class="label mono">06 — Contact</span>
+          <h2>Let's work together.</h2>
+          <p>I'm looking for full-time software engineering roles starting early 2027. The quickest way to reach me is email.</p>
+          <a class="big-mail" href="mailto:s202169810@kfupm.edu.sa">s202169810@kfupm.edu.sa</a>
           <div class="contact-links">
-             <a href="https://mail.google.com/mail/?view=cm&to=s202169810@kfupm.edu.sa" target="_blank" rel="noopener" class="contact-link">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      Email Me
-    </a>
-    <a href="https://github.com/st4rk-71" target="_blank" rel="noopener" class="contact-link">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-      GitHub
-    </a>
+            <a href="https://github.com/st4rk-71" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="assets/Rayan_Alsaedi_CV.pdf" target="_blank" rel="noopener">Résumé ↗</a>
           </div>
         </div>
-        <div class="contact-right">
-          <form id="contact-form" action="https://formspree.io/f/xjgerogd" method="POST" class="contact-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
-            </div>
-            <button type="submit" class="btn-primary btn-full">Send Message</button>
-            <p id="form-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
+        <form id="contact-form" class="form reveal" action="https://formspree.io/f/xjgerogd" method="POST" novalidate>
+          <div class="row2">
+            <label>Name<input type="text" name="name" required placeholder="Your name" /></label>
+            <label>Email<input type="email" name="email" required placeholder="you@company.com" /></label>
+          </div>
+          <label>Message<textarea name="message" rows="5" required placeholder="Tell me about the role…"></textarea></label>
+          <button type="submit" class="btn btn-full">Send message</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
- 
+
   </main>
- 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <span class="footer-logo">R.</span>
-      <p>© 2025 Rayan Faisal Alsaedi. Built with care.</p>
-      <a href="#top" class="back-top">Back to top ↑</a>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Rayan Faisal Alsaedi</span>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
- 
+
   <script src="js/script.js" defer></script>
 </body>
 </html>

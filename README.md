@@ -1,102 +1,56 @@
-# 🌐 Rayan Alsaedi — Personal Portfolio
+# Rayan Alsaedi — Portfolio
 
-A personal portfolio website built to showcase my projects, skills, and experience as a Software Engineering student at KFUPM. Designed with co-op and internship applications in mind
+Personal portfolio of Rayan Faisal Alsaedi, Software Engineering graduate from KFUPM (December 2026).
 
-🔗 **Live Site:** [st4rk-71.github.io/portfolio](https://st4rk-71.github.io/portfolio/)
+**Live site:** [st4rk-71.github.io/portfolio](https://st4rk-71.github.io/portfolio/)
 
----
+## Sections
 
-## 📖 About
-This portfolio presents my work as a full-stack web developer. It includes a projects showcase, a skills overview, a contact form, and links to my GitHub and CV.
+- **About:** short introduction and key numbers
+- **Experience:** Platform Engineering Intern at Huawei (CEM, Riyadh, Jun–Aug 2026) and Course Grader at KFUPM
+- **Senior Design Project:** Integrated UAV-Based Data Acquisition & Performance Evaluation System (ground control station, secure telemetry, detection)
+- **Projects:** Qudrat platform, Tournament Management App, Flight Status Prediction, Bank Management System
+- **Skills** and **Contact** (Formspree form)
 
-### ## ✅ Features
+## Features
 
-- 📱 **Responsive layout** — works on mobile, tablet, and desktop
-- 🌙 **Dark / Light theme toggle** — OS preference detection + `localStorage` persistence
-- 👋 **Time-based greeting** — Good morning / afternoon / evening
-- 🔍 **Project filtering** — Filter by All / Web / C++
-- 🔤 **Project sorting** — Sort A→Z or Z→A
-- ✨ **Scroll animations** — Fade-in via IntersectionObserver
-- 🔵 **Active nav highlighting** — Highlights current section while scrolling
-- 📬 **Contact form** — Powered by Formspree with async submission
-- ☰ **Mobile hamburger menu**
-- 🛠️ **Skills & Technologies section**
----
+- Scroll-driven design: progress bar, reveal-on-scroll, a timeline that fills as you scroll, count-up stats
+- Animated network background in the hero (canvas)
+- Dark theme by default with a light-theme toggle (remembered in `localStorage`)
+- Active section highlighting in the navigation
+- Fully responsive with a mobile menu
+- Respects `prefers-reduced-motion`
+- No build step and no dependencies: plain HTML, CSS and JavaScript
 
-## 🛠️ Tech Stack
-| Layer | Technology |
-|---|---|
-| **Markup** | HTML5 (semantic) |
-| **Styling** | CSS3 — Grid, Flexbox, custom properties, animations |
-| **Logic** | Vanilla JavaScript — no frameworks |
-| **Form Backend** | Formspree |
-| **Fonts** | Google Fonts — DM Serif Display + DM Sans |
+## Structure
 
-
-## 🗂️ Project Structure
+```
 portfolio/
 ├── index.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── script.js
-└── assets/
-    ├── images/
-    │   ├── profile.png
-    │   ├── qudrat.png
-    │   ├── pro1.png
-    │   └── pro2.png
-    └── Rayan_Faisal_Alsaedi_SWE CV.pdf
+├── css/styles.css
+├── js/script.js
+├── assets/
+│   ├── Rayan_Alsaedi_CV.pdf
+│   └── images/
+│       ├── huawei.svg
+│       ├── qudrat.png
+│       ├── pro1.png
+│       └── pro2.png
+├── docs/
+│   ├── ai-usage-report.md
+│   └── technical-documentation.md
+└── README.md
+```
 
+## Run locally
 
----
+```bash
+git clone https://github.com/st4rk-71/portfolio.git
+```
 
-# 💼 Projects
-## ⭐ Qudrat Test Preparation Platform (Featured)
-React · Node.js · MongoDB · REST API
+Then open `index.html` in a browser.
 
-Full-stack platform for Qudrat exam preparation featuring daily exams, custom exams, and a performance dashboard.
+## Contact
 
-##  Score Tournament App — KFUPM
-Node.js · MongoDB · Web App
-
-Web application for managing university tournaments with player/admin roles, team management, and statistics.
-
-## 🎓 Education
-King Fahd University of Petroleum and Minerals (KFUPM)
-
-📚 B.S. in Software Engineering
-🗓️ Expected Graduation: December 2026
-📍 Dhahran, Saudi Arabia
- 
-## 🚀 How to Run
-
-1. Clone the repository:
-
-bash   git clone https://github.com/st4rk-71/portfolio.git
-
-2. Open index.html in any browser
-
-
-No build tools, no dependencies, no backend — runs entirely on plain HTML, CSS, and JavaScript.
-
-
-
----
-
-## 📬 Contact
-| Method | Details |
-|---|---|
-| **Email** | s202169810@kfupm.edu.sa |
-| **Phone** | +966 599 175 002 |
-| **GitHub** | [@st4rk-71](https://github.com/st4rk-71) |
-| **Live Portfolio** | [st4rk-71.github.io/portfolio](https://st4rk-71.github.io/portfolio/) |
----
-
-
-## 👤 Author
-**Rayan Faisal Alsaedi
-Senior Software Engineering Student — KFUPM
-Currently seeking a Summer Co-op opportunity**
-
-
+- Email: s202169810@kfupm.edu.sa
+- GitHub: [@st4rk-71](https://github.com/st4rk-71)
