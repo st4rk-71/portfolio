@@ -52,5 +52,5 @@ Then open `index.html` in a browser.
 
 ## Contact
 
-- Email: s202169810@kfupm.edu.sa
+- Email: rayan.f.alsaedi@gmail.com
 - GitHub: [@st4rk-71](https://github.com/st4rk-71)
